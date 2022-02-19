@@ -1,0 +1,49 @@
+@media screen and (max-width: 600px) {
+    
+}
+body {
+    background-color: aquamarine;
+}
+#main-doc {
+    padding-left: 200px;
+}
+#navbar {
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: left;
+
+}
+#navbar ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    width: 150px;
+}
+#navbar ul li a {
+    display:block;
+    color:black;
+    padding:8px 16px;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover {
+    background-color: grey;
+    color:white;
+}
+
+table {
+    text-align: left;
+    border: 1px solid;
+    
+}
+
+table th  {
+    text-align: center;
+    
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border-top: 1px solid;
+}

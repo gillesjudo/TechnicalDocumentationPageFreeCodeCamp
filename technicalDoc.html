@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="technicalStyle.css">
+        <meta charset="UTF-8">
+        <title>Go Intro Doc</title>
+    </head>
+    <body>
+        <nav id="navbar">
+        <header>
+        <h1>Golang Unofficial <br> Documentation</h1>
+        <ul>
+            <li><a class="nav-link" href="#Introduction_Go">Introduction Go</a></li>
+            <li><a class="nav-link" href="#Expected_Knowledge">Expected Knowledge</a></li>
+            <li><a class="nav-link" href="#About_Golang">About Golang</a></li>
+            <li><a class="nav-link" href="#Environment_Setup">Environment Setup</a></li>
+            <li><a class="nav-link" href="#Hello_World">Hello World</a></li>   
+            <li><a class="nav-link" href="#Conclusion_and_Expectations">Conclusion and Expectations</a></li>
+            <li><a class="nav-link" href="#References_and_Documentation">References and Documentation</a></li>
+        </ul> 
+    </header>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section"  id="Introduction_Go">
+                <header>
+                    <h3>Introduction Go</h3>
+                </header>
+                    <p>The Go Programming Language first appeared in the last 13 years. Go which was formerly called Golang
+                        is a statically typed and compiled programming language. According to wikipedia Go was designed
+                        by Google in 2007 because the designers wanted to improve on the flaws of the language C++. 
+                        When making Go they wanted to take elements from other languages that they want to keep.
+                    </p>
+                    <ul>
+                        <li>Static typing and run-time efficiency(like C)</li>
+                        <li>Readability and usability (like JavaScript)</li>
+                        <li>High-performance networking and multiprocessing</li>
+                    </ul>
+                    <p>Go is expressive, concise, clean, and efficient. 
+                        Its concurrency mechanisms make it easy to write programs that get the most out of multicore and networked machines,
+                        while its novel type system enables flexible and modular program construction. 
+                        Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection.
+                        It's a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language.
+                    </p>
+            </section>
+            <section class="main-section" id="Expected_Knowledge">
+                <header>
+                    <h3>Expected Knowledge</h3>
+                </header>
+                    <p>You are expected to know the following information to be able to use go efficiently. 
+                        That being said you can do your own research to bridge the gap that might not be present. 
+                    </p>
+                    <ul>
+                        <li><strong>Beginner to intermediate experience in programming</strong>,
+                        Although the syntax is relatively simple, it is helpful to understand common
+                        programming practices. </li>
+                        <li><strong>Usage of an IDE(Integrated Development Environment)</strong>
+                        Usage of a text editor or IDE like VScode to write your code.</li>
+                        <li><strong>A CLI(Command Line Interface)</strong>Go works well when used with 
+                        a CLI like Powershell(windows), Linux or Mac terminal. </li>
+                    </ul>
+                    <p>With the above experience you should be able to begin writing code and setting up the environment
+                        for go programming.
+                    </p>
+                
+            </section>
+            <section class="main-section"  id="About_Golang">
+                <header>
+                    <h3>About Golang</h3>
+                </header>
+                    <p>Although common for non-malicious uses Go has seen a rise of popularity among malware authors
+                        and APTs(Advanced Persistent Threats). According to zdnet, Go has been widely adopted by malware authors for 
+                        the three following reasons.</p>
+                        <ol>
+                            <li>"The first is that Go supports an easy process for cross-platform compilation. 
+                                This allows malware developers to write code once and compile binaries from the same codebase for multiple platforms, 
+                                allowing them to target Windows, Mac, and Linux from the same codebase, 
+                                a versatility that they don't usually have with many other programming languages."</li>
+                            <li>"The second reason is that Go-based binaries are still hard to analyze and reverse engineer by security researchers, 
+                                which has kept detection rates for Go-based malware very low."</li>
+                            <li>"The third reason is related to Go's support for working with network packets and requests.
+                                Since malware strains usually tamper, assemble, or send/receive network packets all the time, 
+                                Go provides malware devs with all the tools they need in one place."
+                            </li>
+                        </ol>
+                        <p>For more information on the findings please see the article at the following link. <a href="https://www.zdnet.com/article/go-malware-is-now-common-having-been-adopted-by-both-apts-and-e-crime-groups/">ZDnet article</a>
+                        <br><strong><em>Keep in mind that it is illegal to write malware and use malware with the intention of causing damage to unauthorized systems. 
+                            This information is for educational purposes only. </em></strong></p>
+                
+            </section>
+            <section class="main-section"  id="Environment_Setup">
+                <header>
+                    <h3>Environment Setup</h3>
+                </header>
+                    <p>In order to use Go you will need to install go on your environment, please 
+                        see below for package links. Pick the package that matches your OS(Operating System) </p> 
+                    <table>
+                    <tr>
+                        <th>Windows Installation</th>
+                        <th>MacOS Installation</th>
+                        <th>Linux Installation</th>
+                    </tr>
+                    <tr>
+                        <td><ol>
+                            <li> First download the installer at the following link<br> 
+                               <a href="https://go.dev/dl/go1.17.7.windows-amd64.msi">Windows Download Link</a>
+                            </li>
+                            <li>Open the MSI file you downloaded and follow the prompts to install Go.
+                            By default the installer will install Go to 
+                            Program Files or Program Files (x86). You can change the location as needed.
+                            After installing, you will need to close and reopen any open command prompts
+                            to ensure that the changes to the environment made by the installer are reflected
+                            in the command prompt.
+                        </li>
+                        <li> Now we need to verify that we have installed Go.
+                            <ol>
+                                <li>In <strong>Windows</strong>, click the <strong>Start</strong> menu.</li>
+                                <li>In the menu's search box, type <code>cmd</code> then press the <strong>Enter</strong> key. </li>
+                                <li>In the Command Prompt window that appears, type the following command: <br> 
+                                    <code>$ go version</code></li>
+                                <li>Confirm that the command prints the installed version of Go.</li>
+                            </ol>
+                        </li>
+                        </ol>
+                        <p>Awesome Job! now move on to the <strong>"Hello World"</strong> Section of this documentation.</p>
+                    </td>
+                    <td> <ol>
+                        <li>First download the installer at the following link<br>
+                        <a class="Download_Link" href="https://go.dev/dl/go1.17.7.darwin-amd64.pkg">MacOS Download Link
+                        </a></li>
+                        <li>Open the package file you downloaded and follow the prompts to install Go. <br>
+                            The package installs the Go distribution to <code>/usr/local/go</code> <br>
+                            The package should put the <code>/usr/local/go/bin</code> directory in your PATH environment variable.
+                            You may need to restart any open Terminal sessions for the change to take effect. 
+                        </li>
+                        <li>Verify that you've installed Go by opening the command prompt and typing the following command:<br>
+                        <code>$ go version</code></li>
+                        <li>Confirm that the command prints the installed version of Go.</li>
+                    </ol>
+                    <p>Awesome Job! now move on to the <strong>"Hello World"</strong> Section of this documentation.</p>
+                    </td>
+                    <td>
+                        <ol>
+                            <li> First download the installer at the following link<br>
+                            <a class="Download_Link" href="https://go.dev/dl/go1.17.7.linux-amd64.tar.gz">Linux Download Link
+                            </a></li>
+                            <li>Extract the archive you downloaded into <code>/usr/local</code> creating a Go tree
+                            in <code>/usr/local/go</code><br>
+                            <strong>Important:</strong> This step will remove a previous installation at <code>/usr/local/go</code>
+                            , if any, prior to extracting.Please back up any data before proceeding.<br>
+                            For example, run the following as root or through sudo:<br>
+                            <code>$ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.7.linux-amd64.tar.gz</code>
+                        </li>
+                        <li>Add <code>/usr/local/go/bin</code> to the PATH environment variable.<br>
+                        You can do this by adding the following line to your<code>$HOME/.profile</code> or 
+                    <code>/etc/profile</code> (for a system-wide installation):<br> <code>$ export PATH=$PATH:/usr/local/go/bin
+                    </code><br> 
+                    <strong>Note:</strong> Changes made to a profile file may not apply until the next time you log into your computer. 
+                        To apply the changes immediately, 
+                        just run the shell commands directly or execute them from the profile using a command such as:<br> 
+                        <code>$ source $HOME/.profile</code></li>
+                        <li>Verify that you've installed Go by opening a command prompt and typing the following command:<br>
+                        <code>$ go version</code></li>
+                        <li>Confirm that the command prints the installed version of Go.</li>
+                        </ol>
+                       <p>Awesome Job! now move on to the <strong>"Hello World"</strong> Section of this documentation.</p>
+                    </td>
+                </tr>
+                    </table>      
+                
+            </section>
+            <section class="main-section"  id="Hello_World">
+                <header>
+                    <h3>Hello World</h3>
+                </header>
+                    <p>Lets start writing code, we will begin by printing <em>Hello World!</em> in the programming tradition.</p>
+                    <ol>
+                        <li>Open a CLI and cd to your ~(home) directory.<br>
+                        On Linux or Mac use:<br>
+                    <code>cd ~</code><br>On Windows use:<br><code>$ cd %HOMEPATH%</code></li>
+                    <li>Create a Hello directory for your first Go source code.<br>
+                        For example, use the following commands:<br>
+                    <code>$ mkdir hello</code><br>
+                    <code>$ cd hello</code>
+                    </li>
+                    <li>Enable dependency tracking for your code.<br>
+                        When your code imports packages contained in other modules, 
+                        you manage those dependencies through your code's own module.
+                        That module is defined by a go.mod file that tracks the modules that provide those packages. 
+                        That go.mod file stays with your code, including in your source code repository.<br>
+                        To enable dependency tracking for your code by creating a go.mod file, run the
+                        <code>$ go mod init</code> command giving it the name of the module your code will be in.
+                        The name is the module's module path.<br>
+                        In actual development, the module path will typically
+                        be the repository location where your source code will be kept.
+                        For example, the module path might be <i>github.com/mymodule</i>. 
+                        If you plan to publish your module for others to use, the module path <i>must</i>
+                        be a location from which Go tools can download your module.<br>
+                        For the purposes of this tutorial, just use example/hello.<br>
+                        <code>$ go mod init example/hello</code>
+                    </li>
+                    <li>in your text editor, create a file <i>hello.go</i> in which to write your code.</li>
+                    <li>Paste the following code into your <i>hello.go</i> file and save the file.
+                    <code><br>
+                        package main<br><br>
 
+                        import "fmt"<br><br>
+                        
+                        func main() {<br>
+                            fmt.Println("Hello, World!")<br>
+                        }<br>
+                    </code>  
+                        This is your Go code. In this code you:<br>
+                        <ul>
+                            <li>Declare a main package (a package is a way to group functions, 
+                                and it's made up of all the files in the same directory).</li>
+                            <li>Import the popular fmt package, which contains functions for formatting text, 
+                                including printing to the console.This package is one of the standard library 
+                                packages you got when you installed Go.</li>
+                            <li>Implement a main function to print a message to the console. 
+                                A main function executes by default when you run the main package.</li>
+                            </ul>
+                    </li>
+                    <li>Run your code to see the greeting.<br>
+                    <code>$ go run . <br>
+                    Hello, World!</code><br><br>
+                    The go run command is one of many go commands you'll use to get things done with Go. 
+                    Use the following command to get a list of the others:<br>
+                    <code>$ go help</code><br>
+                </li>
+                    </ol>
+                
+            </section>
+            <section class="main-section" id="Conclusion_and_Expectations">
+                <header>
+                    <h3>Conclusion and Expectations</h3>
+                </header>
+                    <p>For more information on any of these Go concepts please go to the website below for official documentation.
+                        This documentation was meant as an introduction to go and as a means of empowering people to start using Go to program. 
+                    </p>
+                
+            </section>
+            <section class="main-section" id="References_and_Documentation">
+                <header>
+                    <h3>References and Documentation</h3>
+                </header>
+                    <p>The following is where <strong>ALL</strong> of the information from this page comes from. 
+                        For more information on Go, please navigate to the following pages</p>
+                        <ol>
+                            <li><a href="https://go.dev/">Go Official Documentation Page and Tutorials</a> </li>
+                            <li><a href="https://en.wikipedia.org/wiki/Go_(programming_language)#Applications">Go Wikipedia Page</a></li>
+                            <li><a href="https://www.zdnet.com/article/go-malware-is-now-common-having-been-adopted-by-both-apts-and-e-crime-groups/">Common Malicious Uses Go</a></li>
+                        </ol>
+                
+            </section>
+            
+        </main>
+
+    </body>
+</html>
