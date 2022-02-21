@@ -47,3 +47,7 @@ table, th, td{
     border-collapse: collapse;
     border-top: 1px solid;
 }
+code {
+    color: red;
+  
+}
